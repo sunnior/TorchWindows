@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{223C2239-0C0B-4F55-B478-212523DA8461}</ProjectGuid>
+    <RootNamespace>LuaJIT</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\..\..\Output\Bin\$(ProjectName)\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>..\..\..\Output\Tmp\$(ProjectName)\$(Configuration)\$(Platform)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\..\..\Output\Bin\$(ProjectName)\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>..\..\..\Output\Tmp\$(ProjectName)\$(Configuration)\$(Platform)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>..\..\..\Output\Bin\$(ProjectName)\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>..\..\..\Output\Tmp\$(ProjectName)\$(Configuration)\$(Platform)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>..\..\..\Output\Bin\$(ProjectName)\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>..\..\..\Output\Tmp\$(ProjectName)\$(Configuration)\$(Platform)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lib_aux.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lib_base.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lib_bit.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lib_debug.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lib_ffi.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lib_init.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lib_io.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lib_jit.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lib_math.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lib_os.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lib_package.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lib_string.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lib_table.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_alloc.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_api.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_asm.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_bc.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_bcread.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_bcwrite.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_buf.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_carith.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_ccall.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_ccallback.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_cconv.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_cdata.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_char.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_clib.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_cparse.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_crecord.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_ctype.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_debug.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_dispatch.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_err.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_ffrecord.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_func.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_gc.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_gdbjit.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_ir.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_lex.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_lib.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_load.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_mcode.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_meta.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_obj.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_opt_dce.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_opt_fold.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_opt_loop.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_opt_mem.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_opt_narrow.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_opt_sink.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_opt_split.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_parse.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_profile.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_record.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_snap.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_state.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_str.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_strfmt.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_strfmt_num.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_strscan.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_tab.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_trace.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_udata.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_vmevent.c" />
+    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_vmmath.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_alloc.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_arch.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_asm.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_asm_arm.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_asm_arm64.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_asm_mips.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_asm_ppc.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_asm_x86.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_bc.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_bcdef.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_bcdump.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_buf.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_carith.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_ccall.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_ccallback.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_cconv.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_cdata.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_char.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_clib.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_cparse.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_crecord.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_ctype.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_debug.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_def.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_dispatch.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_emit_arm.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_emit_arm64.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_emit_mips.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_emit_ppc.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_emit_x86.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_err.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_errmsg.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_ff.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_ffdef.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_ffrecord.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_folddef.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_frame.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_func.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_gc.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_gdbjit.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_ir.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_ircall.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_iropt.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_jit.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_lex.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_lib.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_libdef.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_mcode.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_meta.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_obj.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_parse.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_profile.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_recdef.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_record.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_snap.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_state.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_str.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_strfmt.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_strscan.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_tab.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_target.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_target_arm.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_target_arm64.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_target_mips.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_target_ppc.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_target_x86.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_trace.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_traceerr.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_udata.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_vm.h" />
+    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_vmevent.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
