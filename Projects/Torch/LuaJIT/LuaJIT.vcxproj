@@ -22,6 +22,7 @@
     <ProjectGuid>{223C2239-0C0B-4F55-B478-212523DA8461}</ProjectGuid>
     <RootNamespace>LuaJIT</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>LuaJIT</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

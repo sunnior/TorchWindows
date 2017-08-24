@@ -1,9 +1,9 @@
 @set Executable=%1
-@set LuaJITPath=..\..\..\Code\LuaJIT-2.1.0-beta3
+@set LuaJITPath=%2
 @set SrcPath=%LuaJITPath%\src
 @set ALL_LIB=%SrcPath%\lib_base.c %SrcPath%\lib_math.c %SrcPath%\lib_bit.c %SrcPath%\lib_string.c %SrcPath%\lib_table.c %SrcPath%\lib_io.c %SrcPath%\lib_os.c %SrcPath%\lib_package.c %SrcPath%\lib_debug.c %SrcPath%\lib_jit.c %SrcPath%\lib_ffi.c
 
-::%Executable% -m peobj -o lj_vm.obj
+%Executable% -m peobj -o %SrcPath%\lj_vm.obj
 %Executable% -m bcdef -o %SrcPath%\lj_bcdef.h %ALL_LIB%
 %Executable% -m ffdef -o  %SrcPath%\lj_ffdef.h %ALL_LIB%
 %Executable% -m libdef -o %SrcPath%\lj_libdef.h %ALL_LIB%

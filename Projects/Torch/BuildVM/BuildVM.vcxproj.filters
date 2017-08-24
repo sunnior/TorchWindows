@@ -11,4 +11,7 @@
     <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\host\buildvm_libbc.h" />
     <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\host\buildvm.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="buildvm.bat" />
+  </ItemGroup>
 </Project>
