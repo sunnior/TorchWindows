@@ -6,4 +6,7 @@
   <ItemGroup>
     <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\luajit.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="luaexe.bat" />
+  </ItemGroup>
 </Project>

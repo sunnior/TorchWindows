@@ -2,7 +2,7 @@
 ** This file has been pre-processed with DynASM.
 ** http://luajit.org/dynasm.html
 ** DynASM version 1.4.0, DynASM x64 version 1.4.0
-** DO NOT EDIT! The original file is in "../../../Code/LuaJIT-2.1.0-beta3\src\vm_x86.dasc".
+** DO NOT EDIT! The original file is in "..\..\..\Code\LuaJIT-2.1.0-beta3\src\vm_x86.dasc".
 */
 
 #if DASM_VERSION != 10400

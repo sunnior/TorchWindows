@@ -2,13 +2,21 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros">
-    <LuaRoot>../../../Code/LuaJIT-2.1.0-beta3</LuaRoot>
+    <LuaRoot>..\..\..\Code\LuaJIT-2.1.0-beta3</LuaRoot>
+    <LuaRocksRoot>..\..\..\Code\luarocks-2.4.2-win32</LuaRocksRoot>
+    <TmpRoot>..\..\..\Output\Tmp</TmpRoot>
   </PropertyGroup>
   <PropertyGroup />
   <ItemDefinitionGroup />
   <ItemGroup>
     <BuildMacro Include="LuaRoot">
       <Value>$(LuaRoot)</Value>
+    </BuildMacro>
+    <BuildMacro Include="LuaRocksRoot">
+      <Value>$(LuaRocksRoot)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TmpRoot">
+      <Value>$(TmpRoot)</Value>
     </BuildMacro>
   </ItemGroup>
 </Project>

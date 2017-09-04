@@ -140,4 +140,7 @@
     <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_target_x86.h" />
     <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\lj_trace.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="luajit.bat" />
+  </ItemGroup>
 </Project>

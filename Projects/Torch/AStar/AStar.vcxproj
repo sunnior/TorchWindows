@@ -11,8 +11,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{1AD0DCB8-4EB7-4D72-AF5E-387D630F3A4C}</ProjectGuid>
-    <RootNamespace>LuaExe</RootNamespace>
+    <ProjectGuid>{3367157B-6177-4AB9-977E-F9A4DCAD8FBA}</ProjectGuid>
+    <RootNamespace>AStar</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -56,15 +56,11 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(LuaRoot)\src;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <SubSystem>Console</SubSystem>
     </Link>
-    <PostBuildEvent>
-      <Command>luaexe.bat $(OutDir)$(TargetName)$(TargetExt)</Command>
-    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -73,23 +69,23 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(LuaRoot)\src;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <SubSystem>Console</SubSystem>
     </Link>
-    <PostBuildEvent>
-      <Command>luaexe.bat $(OutDir)$(TargetName)$(TargetExt)</Command>
-    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\luajit.c" />
+    <ClCompile Include="..\..\..\Code\AStar\AStar.cpp" />
+    <ClCompile Include="..\..\..\Code\AStar\LuaBinder.cpp" />
+    <ClCompile Include="..\..\..\Code\AStar\main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\Code\LuaJIT-2.1.0-beta3\src\luajit.h" />
+    <ClInclude Include="..\..\..\Code\AStar\AStar.h" />
+    <ClInclude Include="..\..\..\Code\AStar\GameMap.h" />
+    <ClInclude Include="..\..\..\Code\AStar\LuaBinder.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LuaJIT\LuaJIT.vcxproj">
@@ -97,7 +93,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="luaexe.bat" />
+    <None Include="resource.lua" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
