@@ -3,8 +3,8 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros">
     <LuaRoot>..\..\..\Code\LuaJIT-2.1.0-beta3</LuaRoot>
-    <LuaRocksRoot>..\..\..\Code\luarocks-2.4.2-win32</LuaRocksRoot>
     <TmpRoot>..\..\..\Output\Tmp</TmpRoot>
+    <TorchRoot>..\..\..\Code\Torch</TorchRoot>
   </PropertyGroup>
   <PropertyGroup />
   <ItemDefinitionGroup />
@@ -12,11 +12,11 @@
     <BuildMacro Include="LuaRoot">
       <Value>$(LuaRoot)</Value>
     </BuildMacro>
-    <BuildMacro Include="LuaRocksRoot">
-      <Value>$(LuaRocksRoot)</Value>
-    </BuildMacro>
     <BuildMacro Include="TmpRoot">
       <Value>$(TmpRoot)</Value>
+    </BuildMacro>
+    <BuildMacro Include="TorchRoot">
+      <Value>$(TorchRoot)</Value>
     </BuildMacro>
   </ItemGroup>
 </Project>
