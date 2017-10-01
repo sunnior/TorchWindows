@@ -2,5 +2,243 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="..\..\..\Code\THNN\init.c" />
+    <ClCompile Include="..\..\..\Code\THNN\generic\Abs.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\AbsCriterion.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\BatchNormalization.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\BCECriterion.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\ClassNLLCriterion.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\DistKLDivCriterion.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\ELU.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\FeatureLPPooling.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\FusedRNNKernel.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\GatedLinearUnit.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\HardShrink.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\HardTanh.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\IndexLinear.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\L1Cost.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\LeakyReLU.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\Linear.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\LogSigmoid.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\LogSoftMax.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\LookupTable.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\MarginCriterion.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\MSECriterion.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\MultiLabelMarginCriterion.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\MultiMarginCriterion.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\PReLU.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\RReLU.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\Sigmoid.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\SmoothL1Criterion.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\SoftMarginCriterion.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\SoftMax.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\SoftPlus.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\SoftShrink.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\SparseLinear.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\SpatialAdaptiveAveragePooling.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\SpatialAdaptiveMaxPooling.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\SpatialAveragePooling.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\SpatialClassNLLCriterion.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\SpatialConvolutionLocal.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\SpatialConvolutionMap.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\SpatialConvolutionMM.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\SpatialDepthWiseConvolution.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\SpatialDilatedConvolution.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\SpatialDilatedMaxPooling.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\SpatialFractionalMaxPooling.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\SpatialFullConvolution.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\SpatialFullConvolutionMap.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\SpatialFullDilatedConvolution.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\SpatialGridSamplerBilinear.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\SpatialMaxPooling.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\SpatialMaxUnpooling.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\SpatialReflectionPadding.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\SpatialReplicationPadding.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\SpatialSubSampling.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\SpatialUpSamplingBilinear.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\SpatialUpSamplingNearest.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\Sqrt.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\Square.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\Tanh.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\TemporalConvolution.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\TemporalMaxPooling.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\temporalrowconvolution.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\TemporalSubSampling.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\Threshold.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\unfold.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\VolumetricAveragePooling.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\VolumetricConvolution.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\VolumetricConvolutionMM.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\VolumetricDilatedConvolution.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\VolumetricDilatedMaxPooling.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\VolumetricFractionalMaxPooling.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\VolumetricFullConvolution.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\VolumetricFullDilatedConvolution.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\VolumetricMaxPooling.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\VolumetricMaxUnpooling.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\VolumetricReplicationPadding.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\VolumetricUpSamplingNearest.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\THNN\generic\VolumetricUpSamplingTrilinear.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="generic">
+      <UniqueIdentifier>{a69c7800-4098-40e2-b677-0069f2b9a757}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Code\THNN\generic\THNN.h">
+      <Filter>generic</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
