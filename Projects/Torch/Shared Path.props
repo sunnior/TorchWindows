@@ -5,6 +5,7 @@
     <LuaRoot>..\..\..\Code\LuaJIT-2.1.0-beta3</LuaRoot>
     <TmpRoot>..\..\..\Output\Tmp</TmpRoot>
     <TorchRoot>..\..\..\Code\Torch</TorchRoot>
+    <DevRoot>..\..\..\Dev</DevRoot>
   </PropertyGroup>
   <PropertyGroup />
   <ItemDefinitionGroup />
@@ -17,6 +18,9 @@
     </BuildMacro>
     <BuildMacro Include="TorchRoot">
       <Value>$(TorchRoot)</Value>
+    </BuildMacro>
+    <BuildMacro Include="DevRoot">
+      <Value>$(DevRoot)</Value>
     </BuildMacro>
   </ItemGroup>
 </Project>
