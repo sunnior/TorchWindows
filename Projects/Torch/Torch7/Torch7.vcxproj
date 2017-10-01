@@ -94,6 +94,14 @@
     <ClInclude Include="..\..\..\Code\Torch\Torch7\general.h" />
     <ClInclude Include="..\..\..\Code\Torch\Torch7\utils.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LuaT\LuaT.vcxproj">
+      <Project>{2821d94a-99e5-409e-a789-efa1b66ded2e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\TH\TH.vcxproj">
+      <Project>{e91eef44-72ee-41e9-b2e9-09356fff01f3}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

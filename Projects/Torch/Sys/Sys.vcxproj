@@ -11,19 +11,19 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{70318A97-0270-4C3F-8E8A-5FA19E1A3EC7}</ProjectGuid>
-    <RootNamespace>TorchTest</RootNamespace>
+    <ProjectGuid>{54E52C3D-3787-4B61-8ADE-514FFE5B858F}</ProjectGuid>
+    <RootNamespace>Sys</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -44,11 +44,11 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>$(DevRoot)</OutDir>
+    <OutDir>$(TmpRoot)\Bin\$(ProjectName)\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(TmpRoot)\Obj\$(ProjectName)\$(Configuration)\$(Platform)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>$(DevRoot)</OutDir>
+    <OutDir>$(TmpRoot)\Bin\$(ProjectName)\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(TmpRoot)\Obj\$(ProjectName)\$(Configuration)\$(Platform)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -74,18 +74,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\Code\TorchTest\Main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\LuaJIT\LuaJIT.vcxproj">
-      <Project>{223c2239-0c0b-4f55-b478-212523da8461}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Sys\Sys.vcxproj">
-      <Project>{54e52c3d-3787-4b61-8ade-514ffe5b858f}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Torch7\Torch7.vcxproj">
-      <Project>{e6ce008c-ade2-48b9-8d1c-28509f097e31}</Project>
-    </ProjectReference>
+    <ClCompile Include="..\..\..\Code\Sys\sys.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
