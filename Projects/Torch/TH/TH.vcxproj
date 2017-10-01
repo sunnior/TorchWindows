@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Code\Torch\Torch7\TH\generic\simd\convolve.c" />
+    <ClCompile Include="..\..\..\Code\Torch\Torch7\TH\generic\simd\convolve5x5_avx.c" />
+    <ClCompile Include="..\..\..\Code\Torch\Torch7\TH\generic\simd\convolve5x5_sse.c" />
+    <ClCompile Include="..\..\..\Code\Torch\Torch7\TH\THAllocator.c" />
+    <ClCompile Include="..\..\..\Code\Torch\Torch7\TH\THAtomic.c" />
+    <ClCompile Include="..\..\..\Code\Torch\Torch7\TH\THBlas.c" />
+    <ClCompile Include="..\..\..\Code\Torch\Torch7\TH\THDiskFile.c" />
+    <ClCompile Include="..\..\..\Code\Torch\Torch7\TH\THFile.c" />
+    <ClCompile Include="..\..\..\Code\Torch\Torch7\TH\THGeneral.c" />
+    <ClCompile Include="..\..\..\Code\Torch\Torch7\TH\THHalf.c" />
+    <ClCompile Include="..\..\..\Code\Torch\Torch7\TH\THLapack.c" />
+    <ClCompile Include="..\..\..\Code\Torch\Torch7\TH\THLogAdd.c" />
+    <ClCompile Include="..\..\..\Code\Torch\Torch7\TH\THMemoryFile.c" />
+    <ClCompile Include="..\..\..\Code\Torch\Torch7\TH\THRandom.c" />
+    <ClCompile Include="..\..\..\Code\Torch\Torch7\TH\THSize.c" />
+    <ClCompile Include="..\..\..\Code\Torch\Torch7\TH\THStorage.c" />
+    <ClCompile Include="..\..\..\Code\Torch\Torch7\TH\THTensor.c" />
+    <ClCompile Include="..\..\..\Code\Torch\Torch7\TH\THVector.c" />
+    <ClCompile Include="..\..\..\Code\Torch\Torch7\TH\vector\AVX.c" />
+    <ClCompile Include="..\..\..\Code\Torch\Torch7\TH\vector\AVX2.c" />
+    <ClCompile Include="..\..\..\Code\Torch\Torch7\TH\vector\SSE.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Code\Torch\Torch7\TH\TH.h" />
+    <ClInclude Include="..\..\..\Code\Torch\Torch7\TH\THAllocator.h" />
+    <ClInclude Include="..\..\..\Code\Torch\Torch7\TH\THAtomic.h" />
+    <ClInclude Include="..\..\..\Code\Torch\Torch7\TH\THBlas.h" />
+    <ClInclude Include="..\..\..\Code\Torch\Torch7\TH\THDiskFile.h" />
+    <ClInclude Include="..\..\..\Code\Torch\Torch7\TH\THFile.h" />
+    <ClInclude Include="..\..\..\Code\Torch\Torch7\TH\THFilePrivate.h" />
+    <ClInclude Include="..\..\..\Code\Torch\Torch7\TH\THGeneral.h" />
+    <ClInclude Include="..\..\..\Code\Torch\Torch7\TH\THHalf.h" />
+    <ClInclude Include="..\..\..\Code\Torch\Torch7\TH\THLapack.h" />
+    <ClInclude Include="..\..\..\Code\Torch\Torch7\TH\THLogAdd.h" />
+    <ClInclude Include="..\..\..\Code\Torch\Torch7\TH\THMath.h" />
+    <ClInclude Include="..\..\..\Code\Torch\Torch7\TH\THMemoryFile.h" />
+    <ClInclude Include="..\..\..\Code\Torch\Torch7\TH\THRandom.h" />
+    <ClInclude Include="..\..\..\Code\Torch\Torch7\TH\THSize.h" />
+    <ClInclude Include="..\..\..\Code\Torch\Torch7\TH\THStorage.h" />
+    <ClInclude Include="..\..\..\Code\Torch\Torch7\TH\THTensor.h" />
+    <ClInclude Include="..\..\..\Code\Torch\Torch7\TH\THTensorApply.h" />
+    <ClInclude Include="..\..\..\Code\Torch\Torch7\TH\THTensorDimApply.h" />
+    <ClInclude Include="..\..\..\Code\Torch\Torch7\TH\THTensorMacros.h" />
+    <ClInclude Include="..\..\..\Code\Torch\Torch7\TH\THVector.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E91EEF44-72EE-41E9-B2E9-09356FFF01F3}</ProjectGuid>
+    <RootNamespace>TH</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(TmpRoot)\Bin\$(ProjectName)\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(TmpRoot)\Obj\$(ProjectName)\$(Configuration)\$(Platform)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(TmpRoot)\Bin\$(ProjectName)\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(TmpRoot)\Obj\$(ProjectName)\$(Configuration)\$(Platform)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>USE_SSE4_1;USE_SSE4_2;USE_AVX2;USE_AVX;USE_SSE3;USE_SSE2;WIN32;_WINDOWS;USE_GCC_GET_CPUID;TH_HAVE_THREAD;USE_MSC_ATOMICS;_CRT_SECURE_NO_WARNINGS;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>USE_SSE4_1;USE_SSE4_2;USE_AVX2;USE_AVX;USE_SSE3;USE_SSE2;WIN32;_WINDOWS;USE_GCC_GET_CPUID;TH_HAVE_THREAD;USE_MSC_ATOMICS;_CRT_SECURE_NO_WARNINGS;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

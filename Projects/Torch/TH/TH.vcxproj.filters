@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Code\Torch\Torch7\TH\THAtomic.c" />
+    <ClCompile Include="..\..\..\Code\Torch\Torch7\TH\THBlas.c" />
+    <ClCompile Include="..\..\..\Code\Torch\Torch7\TH\THDiskFile.c" />
+    <ClCompile Include="..\..\..\Code\Torch\Torch7\TH\THFile.c" />
+    <ClCompile Include="..\..\..\Code\Torch\Torch7\TH\THGeneral.c" />
+    <ClCompile Include="..\..\..\Code\Torch\Torch7\TH\THAllocator.c" />
+    <ClCompile Include="..\..\..\Code\Torch\Torch7\TH\THLogAdd.c" />
+    <ClCompile Include="..\..\..\Code\Torch\Torch7\TH\THMemoryFile.c" />
+    <ClCompile Include="..\..\..\Code\Torch\Torch7\TH\THRandom.c" />
+    <ClCompile Include="..\..\..\Code\Torch\Torch7\TH\THSize.c" />
+    <ClCompile Include="..\..\..\Code\Torch\Torch7\TH\THStorage.c" />
+    <ClCompile Include="..\..\..\Code\Torch\Torch7\TH\THTensor.c" />
+    <ClCompile Include="..\..\..\Code\Torch\Torch7\TH\THVector.c" />
+    <ClCompile Include="..\..\..\Code\Torch\Torch7\TH\THHalf.c" />
+    <ClCompile Include="..\..\..\Code\Torch\Torch7\TH\THLapack.c" />
+    <ClCompile Include="..\..\..\Code\Torch\Torch7\TH\generic\simd\convolve.c" />
+    <ClCompile Include="..\..\..\Code\Torch\Torch7\TH\generic\simd\convolve5x5_avx.c" />
+    <ClCompile Include="..\..\..\Code\Torch\Torch7\TH\generic\simd\convolve5x5_sse.c" />
+    <ClCompile Include="..\..\..\Code\Torch\Torch7\TH\vector\AVX.c" />
+    <ClCompile Include="..\..\..\Code\Torch\Torch7\TH\vector\AVX2.c" />
+    <ClCompile Include="..\..\..\Code\Torch\Torch7\TH\vector\SSE.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Code\Torch\Torch7\TH\THAtomic.h" />
+    <ClInclude Include="..\..\..\Code\Torch\Torch7\TH\THBlas.h" />
+    <ClInclude Include="..\..\..\Code\Torch\Torch7\TH\THDiskFile.h" />
+    <ClInclude Include="..\..\..\Code\Torch\Torch7\TH\THFile.h" />
+    <ClInclude Include="..\..\..\Code\Torch\Torch7\TH\THFilePrivate.h" />
+    <ClInclude Include="..\..\..\Code\Torch\Torch7\TH\THGeneral.h" />
+    <ClInclude Include="..\..\..\Code\Torch\Torch7\TH\TH.h" />
+    <ClInclude Include="..\..\..\Code\Torch\Torch7\TH\THAllocator.h" />
+    <ClInclude Include="..\..\..\Code\Torch\Torch7\TH\THLogAdd.h" />
+    <ClInclude Include="..\..\..\Code\Torch\Torch7\TH\THMath.h" />
+    <ClInclude Include="..\..\..\Code\Torch\Torch7\TH\THMemoryFile.h" />
+    <ClInclude Include="..\..\..\Code\Torch\Torch7\TH\THRandom.h" />
+    <ClInclude Include="..\..\..\Code\Torch\Torch7\TH\THSize.h" />
+    <ClInclude Include="..\..\..\Code\Torch\Torch7\TH\THStorage.h" />
+    <ClInclude Include="..\..\..\Code\Torch\Torch7\TH\THTensor.h" />
+    <ClInclude Include="..\..\..\Code\Torch\Torch7\TH\THTensorApply.h" />
+    <ClInclude Include="..\..\..\Code\Torch\Torch7\TH\THTensorDimApply.h" />
+    <ClInclude Include="..\..\..\Code\Torch\Torch7\TH\THTensorMacros.h" />
+    <ClInclude Include="..\..\..\Code\Torch\Torch7\TH\THVector.h" />
+    <ClInclude Include="..\..\..\Code\Torch\Torch7\TH\THHalf.h" />
+    <ClInclude Include="..\..\..\Code\Torch\Torch7\TH\THLapack.h" />
+  </ItemGroup>
+</Project>
