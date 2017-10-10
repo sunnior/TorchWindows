@@ -11,19 +11,19 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{70318A97-0270-4C3F-8E8A-5FA19E1A3EC7}</ProjectGuid>
-    <RootNamespace>TorchTest</RootNamespace>
+    <ProjectGuid>{92FC2B40-EB12-40C2-9BFE-3AAED03A1089}</ProjectGuid>
+    <RootNamespace>Cjson</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -44,11 +44,11 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>$(DevRoot)</OutDir>
+    <OutDir>$(TmpRoot)\Bin\$(ProjectName)\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(TmpRoot)\Obj\$(ProjectName)\$(Configuration)\$(Platform)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>$(DevRoot)</OutDir>
+    <OutDir>$(TmpRoot)\Bin\$(ProjectName)\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(TmpRoot)\Obj\$(ProjectName)\$(Configuration)\$(Platform)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -57,6 +57,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>$(LuaRoot)\src;</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ENABLE_CJSON_GLOBAL; _MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -67,6 +68,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>$(LuaRoot)\src;</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ENABLE_CJSON_GLOBAL; _MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -74,24 +76,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\Code\TorchTest\Main.cpp" />
+    <ClInclude Include="..\..\..\Code\Cjson\dtoa_config.h" />
+    <ClInclude Include="..\..\..\Code\Cjson\fpconv.h" />
+    <ClInclude Include="..\..\..\Code\Cjson\strbuf.h" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Cjson\Cjson.vcxproj">
-      <Project>{92fc2b40-eb12-40c2-9bfe-3aaed03a1089}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Image\Image.vcxproj">
-      <Project>{c64072cd-7c9b-4b29-a6e6-35aad481a832}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\LuaJIT\LuaJIT.vcxproj">
-      <Project>{223c2239-0c0b-4f55-b478-212523da8461}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Sys\Sys.vcxproj">
-      <Project>{54e52c3d-3787-4b61-8ade-514ffe5b858f}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Torch7\Torch7.vcxproj">
-      <Project>{e6ce008c-ade2-48b9-8d1c-28509f097e31}</Project>
-    </ProjectReference>
+    <ClCompile Include="..\..\..\Code\Cjson\dtoa.c" />
+    <ClCompile Include="..\..\..\Code\Cjson\fpconv.c" />
+    <ClCompile Include="..\..\..\Code\Cjson\g_fmt.c" />
+    <ClCompile Include="..\..\..\Code\Cjson\lua_cjson.c" />
+    <ClCompile Include="..\..\..\Code\Cjson\strbuf.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

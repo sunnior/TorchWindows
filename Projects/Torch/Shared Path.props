@@ -6,6 +6,7 @@
     <TmpRoot>..\..\..\Output\Tmp</TmpRoot>
     <TorchRoot>..\..\..\Code\Torch</TorchRoot>
     <DevRoot>..\..\..\Dev</DevRoot>
+    <CodeRoot>..\..\..\Code</CodeRoot>
   </PropertyGroup>
   <PropertyGroup />
   <ItemDefinitionGroup />
@@ -21,6 +22,9 @@
     </BuildMacro>
     <BuildMacro Include="DevRoot">
       <Value>$(DevRoot)</Value>
+    </BuildMacro>
+    <BuildMacro Include="CodeRoot">
+      <Value>$(CodeRoot)</Value>
     </BuildMacro>
   </ItemGroup>
 </Project>
