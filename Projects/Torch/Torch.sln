@@ -30,6 +30,9 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TH", "TH\TH.vcxproj", "{E91EEF44-72EE-41E9-B2E9-09356FFF01F3}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Torch7", "Torch7\Torch7.vcxproj", "{E6CE008C-ADE2-48B9-8D1C-28509F097E31}"
+	ProjectSection(ProjectDependencies) = postProject
+		{496FA65A-BC31-4432-80AE-6B2F789BB5FA} = {496FA65A-BC31-4432-80AE-6B2F789BB5FA}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TorchTest", "TorchTest\TorchTest.vcxproj", "{70318A97-0270-4C3F-8E8A-5FA19E1A3EC7}"
 EndProject
