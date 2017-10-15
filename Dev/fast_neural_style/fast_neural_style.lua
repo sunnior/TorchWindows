@@ -36,7 +36,13 @@ cmd:option('-cudnn_benchmark', 0)
 
 
 local function main()
-  local opt = cmd:parse(arg)
+  -- local opt = cmd:parse(arg)
+  local opt = {}
+  opt.input_image = 'fast_neural_style/dog.jpg'
+  opt.model = 'fast_neural_style/models/feathers.t7'
+  opt.gpu = -1
+  opt.output_image = 'out.jpg'
+
 
   if (opt.input_image == '') and (opt.input_dir == '') then
     error('Must give exactly one of -input_image or -input_dir')
@@ -46,6 +52,7 @@ local function main()
   local ok, checkpoint = pcall(function() return torch.load(opt.model) end)
   if not ok then
     print('ERROR: Could not load model from ' .. opt.model)
+	print(checkpoint)
     print('You may need to download the pretrained models by running')
     print('bash models/download_style_transfer_models.sh')
     return
