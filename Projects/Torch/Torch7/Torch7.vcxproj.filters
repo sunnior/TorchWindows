@@ -14,9 +14,26 @@
     <ClCompile Include="..\..\..\Code\Torch\Torch7\Generator.c" />
     <ClCompile Include="..\..\..\Code\Torch\Torch7\init.c" />
     <ClCompile Include="..\..\..\Code\Torch\Torch7\MemoryFile.c" />
+    <ClCompile Include="..\..\..\Code\Torch\Torch7\generic\Storage.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\Torch\Torch7\generic\TensorOperator.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\Torch\Torch7\generic\Tensor.c">
+      <Filter>generic</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\Code\Torch\Torch7\utils.h" />
     <ClInclude Include="..\..\..\Code\Torch\Torch7\general.h" />
+    <ClInclude Include="..\..\..\Code\Torch\Torch7\generic\luaG.h">
+      <Filter>generic</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="generic">
+      <UniqueIdentifier>{0b3da177-b4b3-4996-bf9e-883a541ead1c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>

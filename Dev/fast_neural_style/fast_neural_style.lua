@@ -41,7 +41,10 @@ local function main()
   opt.input_image = 'fast_neural_style/dog.jpg'
   opt.model = 'fast_neural_style/models/feathers.t7'
   opt.gpu = -1
-  opt.output_image = 'out.jpg'
+  opt.output_image = 'fast_neural_style/out.jpg'
+  opt.input_dir = ''
+  opt.image_size = 768
+  opt.median_filter = 3
 
 
   if (opt.input_image == '') and (opt.input_dir == '') then
@@ -77,7 +80,6 @@ local function main()
       img = image.scale(img, opt.image_size)
     end
     local H, W = img:size(2), img:size(3)
-
     local img_pre = preprocess.preprocess(img:view(1, 3, H, W)):type(dtype)
     local timer = nil
     if opt.timing == 1 then
@@ -87,6 +89,7 @@ local function main()
       if cutorch then cutorch.synchronize() end
     end
     local img_out = model:forward(img_pre)
+
     if opt.timing == 1 then
       if cutorch then cutorch.synchronize() end
       local time = timer:time().real
@@ -100,10 +103,10 @@ local function main()
     end
 
     print('Writing output image to ' .. out_path)
-    local out_dir = paths.dirname(out_path)
-    if not path.isdir(out_dir) then
-      paths.mkdir(out_dir)
-    end
+    -- local out_dir = paths.dirname(out_path)
+    -- if not path.isdir(out_dir) then
+      --paths.mkdir(out_dir)
+    --end
     image.save(out_path, img_out)
   end
 

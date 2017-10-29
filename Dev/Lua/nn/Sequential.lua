@@ -41,7 +41,10 @@ end
 function Sequential:updateOutput(input)
    local currentOutput = input
    for i=1,#self.modules do
-      currentOutput = self:rethrowErrors(self.modules[i], i, 'updateOutput', currentOutput)
+      print('forward')
+      -- currentOutput = self:rethrowErrors(self.modules[i], i, 'updateOutput', currentOutput)
+	  currentOutput = self.modules[i].updateOutput(currentOutput)
+	  error('sdfasdfs')
    end
    self.output = currentOutput
    return currentOutput

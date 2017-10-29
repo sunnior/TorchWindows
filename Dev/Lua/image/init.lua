@@ -228,9 +228,9 @@ local function processJPG(img, depth, tensortype)
 end
 
 local function loadJPG(filename, depth, tensortype)
-   if not xlua.require 'libjpeg' then
-      dok.error('libjpeg package not found, please install libjpeg','image.loadJPG')
-   end
+   --if not xlua.require 'libjpeg' then
+      --dok.error('libjpeg package not found, please install libjpeg','image.loadJPG')
+   --end
    local load_from_file = 1
    local a = template(tensortype).libjpeg.load(load_from_file, filename)
    if a == nil then
@@ -261,13 +261,14 @@ end
 rawset(image, 'decompressJPG', decompressJPG)
 
 local function saveJPG(filename, tensor)
-   if not xlua.require 'libjpeg' then
-      dok.error('libjpeg package not found, please install libjpeg','image.saveJPG')
-   end
+   --if not xlua.require 'libjpeg' then
+      --dok.error('libjpeg package not found, please install libjpeg','image.saveJPG')
+   --end
    tensor = clampImage(tensor)
    local save_to_file = 1
    local quality = 75
    tensor.libjpeg.save(filename, tensor, save_to_file, quality)
+
 end
 rawset(image, 'saveJPG', saveJPG)
 

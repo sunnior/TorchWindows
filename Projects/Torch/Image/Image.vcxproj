@@ -59,6 +59,12 @@
       <AdditionalIncludeDirectories>$(CodeRoot)\Image\3rdparty;$(TorchRoot)\Torch7\TH;$(TorchRoot)\Torch7\luaT;$(LuaRoot)\src;</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
+    <Lib>
+      <AdditionalDependencies>libjpegd.lib</AdditionalDependencies>
+    </Lib>
+    <Lib>
+      <AdditionalLibraryDirectories>$(CodeRoot)\Image\3rdparty;</AdditionalLibraryDirectories>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>

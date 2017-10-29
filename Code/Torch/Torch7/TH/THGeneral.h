@@ -10,6 +10,7 @@
 #include <time.h>
 #include <string.h>
 #include <stddef.h>
+#include <stdint.h>
 
 //#cmakedefine USE_BLAS
 //#cmakedefine USE_LAPACK
@@ -43,12 +44,12 @@
 
 typedef void (*THErrorHandlerFunction)(const char *msg, void *data);
 typedef void (*THArgErrorHandlerFunction)(int argNumber, const char *msg, void *data);
+typedef int64_t dl_int64;
 
 #define TH_DESC_BUFF_LEN 64
 typedef struct {
     char str[TH_DESC_BUFF_LEN];
 } THDescBuff;
-
 
 TH_API double THLog1p(const double x);
 TH_API THDescBuff _THSizeDesc(const long *size, const long ndim);

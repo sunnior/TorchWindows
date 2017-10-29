@@ -79,6 +79,18 @@
     <ClCompile Include="..\..\..\Code\Torch\Torch7\DiskFile.c" />
     <ClCompile Include="..\..\..\Code\Torch\Torch7\File.c" />
     <ClCompile Include="..\..\..\Code\Torch\Torch7\Generator.c" />
+    <ClCompile Include="..\..\..\Code\Torch\Torch7\generic\Storage.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\Torch\Torch7\generic\Tensor.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Code\Torch\Torch7\generic\TensorOperator.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\..\..\Code\Torch\Torch7\init.c" />
     <ClCompile Include="..\..\..\Code\Torch\Torch7\MemoryFile.c" />
     <ClCompile Include="..\..\..\Code\Torch\Torch7\PipeFile.c" />
@@ -92,6 +104,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\Code\Torch\Torch7\general.h" />
+    <ClInclude Include="..\..\..\Code\Torch\Torch7\generic\luaG.h" />
     <ClInclude Include="..\..\..\Code\Torch\Torch7\utils.h" />
   </ItemGroup>
   <ItemGroup>

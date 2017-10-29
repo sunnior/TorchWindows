@@ -365,7 +365,7 @@ READ_WRITE_METHODS(double, Double,
 
 
 /* For Long we need to rewrite everything, because of the special management of longSize */
-static size_t THDiskFile_readLong(THFile *self, long *data, size_t n)
+static size_t THDiskFile_readLong(THFile *self, dl_int64 *data, size_t n)
 {
   THDiskFile *dfself = (THDiskFile*)(self);
   size_t nread = 0L;
@@ -375,11 +375,11 @@ static size_t THDiskFile_readLong(THFile *self, long *data, size_t n)
 
   if(dfself->file.isBinary)
   {
-    if(dfself->longSize == 0 || dfself->longSize == sizeof(long))
+    if(dfself->longSize == 0 || dfself->longSize == sizeof(dl_int64))
     {
-      nread = fread__(data, sizeof(long), n, dfself->handle);
-      if(!dfself->isNativeEncoding && (sizeof(long) > 1) && (nread > 0))
-        THDiskFile_reverseMemory(data, data, sizeof(long), nread);
+      nread = fread__(data, sizeof(dl_int64), n, dfself->handle);
+      if(!dfself->isNativeEncoding && (sizeof(dl_int64) > 1) && (nread > 0))
+        THDiskFile_reverseMemory(data, data, sizeof(dl_int64), nread);
     } else if(dfself->longSize == 4)
     {
       nread = fread__(data, 4, n, dfself->handle);
