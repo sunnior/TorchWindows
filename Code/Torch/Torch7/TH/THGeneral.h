@@ -44,7 +44,7 @@
 
 typedef void (*THErrorHandlerFunction)(const char *msg, void *data);
 typedef void (*THArgErrorHandlerFunction)(int argNumber, const char *msg, void *data);
-typedef int64_t dl_int64;
+typedef long long dl_file_long;
 
 #define TH_DESC_BUFF_LEN 64
 typedef struct {

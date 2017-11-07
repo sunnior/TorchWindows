@@ -365,66 +365,78 @@ READ_WRITE_METHODS(double, Double,
 
 
 /* For Long we need to rewrite everything, because of the special management of longSize */
-static size_t THDiskFile_readLong(THFile *self, dl_int64 *data, size_t n)
+static size_t THDiskFile_readLong(THFile *self, long *data, size_t n)
 {
-  THDiskFile *dfself = (THDiskFile*)(self);
-  size_t nread = 0L;
 
-  THArgCheck(dfself->handle != NULL, 1, "attempt to use a closed file");
-  THArgCheck(dfself->file.isReadable, 1, "attempt to read in a write-only file");
+	THDiskFile *dfself = (THDiskFile*)(self);
+	size_t nread = 0L;
 
-  if(dfself->file.isBinary)
-  {
-    if(dfself->longSize == 0 || dfself->longSize == sizeof(dl_int64))
-    {
-      nread = fread__(data, sizeof(dl_int64), n, dfself->handle);
-      if(!dfself->isNativeEncoding && (sizeof(dl_int64) > 1) && (nread > 0))
-        THDiskFile_reverseMemory(data, data, sizeof(dl_int64), nread);
-    } else if(dfself->longSize == 4)
-    {
-      nread = fread__(data, 4, n, dfself->handle);
-      if(!dfself->isNativeEncoding && (nread > 0))
-        THDiskFile_reverseMemory(data, data, 4, nread);
-      size_t i;
-      for(i = nread; i > 0; i--)
-        data[i-1] = ((int *)data)[i-1];
-    }
-    else /* if(dfself->longSize == 8) */
-    {
-      int big_endian = !THDiskFile_isLittleEndianCPU();
-      int32_t *buffer = THAlloc(8*n);
-      nread = fread__(buffer, 8, n, dfself->handle);
-      size_t i;
-      for(i = nread; i > 0; i--)
-        data[i-1] = buffer[2*(i-1) + big_endian];
-      THFree(buffer);
-      if(!dfself->isNativeEncoding && (nread > 0))
-        THDiskFile_reverseMemory(data, data, 4, nread);
-     }
-  }
-  else
-  {
-    size_t i;
-    for(i = 0; i < n; i++)
-    {
-      int ret = fscanf(dfself->handle, "%ld", &data[i]); if(ret <= 0) break; else nread++;
-    }
-    if(dfself->file.isAutoSpacing && (n > 0))
-    {
-      int c = fgetc(dfself->handle);
-      if( (c != '\n') && (c != EOF) )
-        ungetc(c, dfself->handle);
-    }
-  }
+	THArgCheck(dfself->handle != NULL, 1, "attempt to use a closed file");
+	THArgCheck(dfself->file.isReadable, 1, "attempt to read in a write-only file");
 
-  if(nread != n)
-  {
-    dfself->file.hasError = 1; /* shouldn't we put hasError to 0 all the time ? */
-    if(!dfself->file.isQuiet)
-      THError("read error: read %d blocks instead of %d", nread, n);
-  }
+	if (dfself->file.isBinary)
+	{
+		if (dfself->longSize == 0)
+		{
+			dl_file_long* buffer = THAlloc(sizeof(dl_file_long) * n);
+			nread = fread__(buffer, sizeof(dl_file_long), n, dfself->handle);
+			for(size_t i = 0; i < n; ++i)
+			{
+				data[i] = buffer[i];
+			}
+			THFree(buffer);
+		}
+		else if (dfself->longSize == sizeof(long))
+		{
+			nread = fread__(data, sizeof(long), n, dfself->handle);
+			if (!dfself->isNativeEncoding && (sizeof(long) > 1) && (nread > 0))
+				THDiskFile_reverseMemory(data, data, sizeof(long), nread);
+		}
+		else if (dfself->longSize == 4)
+		{
+			nread = fread__(data, 4, n, dfself->handle);
+			if (!dfself->isNativeEncoding && (nread > 0))
+				THDiskFile_reverseMemory(data, data, 4, nread);
+			size_t i;
+			for (i = nread; i > 0; i--)
+				data[i - 1] = ((int *)data)[i - 1];
+		}
+		else /* if(dfself->longSize == 8) */
+		{
+			int big_endian = !THDiskFile_isLittleEndianCPU();
+			int32_t *buffer = THAlloc(8 * n);
+			nread = fread__(buffer, 8, n, dfself->handle);
+			size_t i;
+			for (i = nread; i > 0; i--)
+				data[i - 1] = buffer[2 * (i - 1) + big_endian];
+			THFree(buffer);
+			if (!dfself->isNativeEncoding && (nread > 0))
+				THDiskFile_reverseMemory(data, data, 4, nread);
+		}
+	}
+	else
+	{
+		size_t i;
+		for (i = 0; i < n; i++)
+		{
+			int ret = fscanf(dfself->handle, "%ld", &data[i]); if (ret <= 0) break; else nread++;
+		}
+		if (dfself->file.isAutoSpacing && (n > 0))
+		{
+			int c = fgetc(dfself->handle);
+			if ((c != '\n') && (c != EOF))
+				ungetc(c, dfself->handle);
+		}
+	}
 
-  return nread;
+	if (nread != n)
+	{
+		dfself->file.hasError = 1; /* shouldn't we put hasError to 0 all the time ? */
+		if (!dfself->file.isQuiet)
+			THError("read error: read %d blocks instead of %d", nread, n);
+	}
+
+	return nread;
 }
 
 static size_t THDiskFile_writeLong(THFile *self, long *data, size_t n)

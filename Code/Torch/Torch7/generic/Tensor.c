@@ -1278,8 +1278,8 @@ static int torch_Tensor_(read)(lua_State *L)
   THFile *file = luaT_checkudata(L, 2, "torch.File");
 
   tensor->nDimension = THFile_readIntScalar(file);
-  tensor->size = THAlloc(sizeof(dl_int64)*tensor->nDimension);
-  tensor->stride = THAlloc(sizeof(dl_int64)*tensor->nDimension);
+  tensor->size = THAlloc(sizeof(long)*tensor->nDimension);
+  tensor->stride = THAlloc(sizeof(long)*tensor->nDimension);
   THFile_readLongRaw(file, tensor->size, tensor->nDimension);
   THFile_readLongRaw(file, tensor->stride, tensor->nDimension);
   tensor->storageOffset = THFile_readLongScalar(file);

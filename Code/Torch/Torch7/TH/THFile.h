@@ -26,7 +26,7 @@ TH_API unsigned char THFile_readByteScalar(THFile *self);
 TH_API char THFile_readCharScalar(THFile *self);
 TH_API short THFile_readShortScalar(THFile *self);
 TH_API int THFile_readIntScalar(THFile *self);
-TH_API dl_int64 THFile_readLongScalar(THFile *self);
+TH_API long THFile_readLongScalar(THFile *self);
 TH_API float THFile_readFloatScalar(THFile *self);
 TH_API double THFile_readDoubleScalar(THFile *self);
 
